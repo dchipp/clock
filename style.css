@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --displayHeight: 260px;
+}
+body{
+    margin: 0px;
+    background-color: rgb(20,20,20);
+    font-family: 'Roboto', sans-serif;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.option{
+    color: rgb(90,90,90);
+}
+.active{
+    text-decoration: underline;
+    color: rgb(140,140,140);;
+}
+p{
+    margin: 0px;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 115%;
+    font-weight: bolder;
+    color: rgb(170,170,170);
+}
+.mainContainer{    
+    box-sizing: border-box;
+    width: 100vw;
+    height:95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.9s;
+    gap: clamp(10px, calc(40 * var(--displayHeight) / 300), 60px)
+}
+.display{
+    height: var(--displayHeight);
+    width: calc(var(--displayHeight) * 140 / 260);
+    display: grid;
+    grid-template-columns: 14.2% 71.4% 14.2%;
+    grid-template-rows: 7.7% 38.4% 7.7% 38.4% 7.7%;
+    transition: 0.4s;
+}
+.twodots{
+    height: var(--displayHeight);
+    width: calc(var(--displayHeight) * 20 / 260);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15.3% 7.7% 53.8% 7.7% 15.3%;
+    transition: 0.4s;
+}
+.dots{
+    background-color: white;
+}
+.segment{
+    background-color: red;
+    border-radius: 20px;
+}
